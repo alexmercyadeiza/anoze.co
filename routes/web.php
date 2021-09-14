@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Livewire\Manager\Auth\Login;
+use App\Http\Livewire\Manager\Dashboard;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/login', Login::class);
+
+Route::get('/manager/dashboard', Dashboard::class);
