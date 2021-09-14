@@ -14,51 +14,60 @@
     </div>
 
     <div class="p-8 space-y-4">
-        <div
-            class="p-3 flex items-center justify-between cursor-pointer rounded-md hover:rounded-md hover:bg-yellow-200 bg-yellow-400 focus:bg-yellow-100">
-            <a href="#" class="font-medium uppercase tracking-widest">Home</a>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd"
-                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                    clip-rule="evenodd" />
-            </svg>
-        </div>
+
+        <a href="/manager" class="font-medium uppercase tracking-widest">
+            <div
+                class="{{ Request::is('manager') ? 'bg-yellow-400' : '' }} p-3 flex items-center justify-between cursor-pointer rounded-md hover:rounded-md hover:bg-yellow-200 focus:bg-yellow-100">
+                <span>Home</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd" />
+                </svg>
+            </div>
+        </a>
 
         <hr />
 
-        <div
-            class="p-3 flex items-center justify-between cursor-pointer rounded-md hover:bg-yellow-300 focus:bg-yellow-100">
-            <a href="#" class="font-medium uppercase tracking-widest">Upload Receipt</a>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd"
-                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                    clip-rule="evenodd" />
-            </svg>
-        </div>
+        <a href="/upload" class="font-medium uppercase tracking-widest">
+            <div
+                class="{{ Request::is('upload') ? 'bg-yellow-400' : '' }} p-3 flex items-center justify-between cursor-pointer rounded-md hover:bg-yellow-300 focus:bg-yellow-100">
+                <span> Upload Receipt </span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd" />
+                </svg>
+            </div>
+        </a>
 
         <hr />
 
-        <div
-            class="p-3 flex items-center justify-between cursor-pointer rounded-md hover:bg-yellow-300 focus:bg-yellow-100">
-            <a href="#" class="font-medium uppercase tracking-widest">Payments</a>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd"
-                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                    clip-rule="evenodd" />
-            </svg>
-        </div>
+        <a href="/payments" class="font-medium uppercase tracking-widest">
+            <div
+                class="{{ Request::is('payments') ? 'bg-yellow-400' : '' }} p-3 flex items-center justify-between cursor-pointer rounded-md hover:bg-yellow-300 focus:bg-yellow-100">
+                <span> Payments </span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd" />
+                </svg>
+            </div>
+        </a>
 
         <hr />
 
-        <div
-            class="p-3 flex items-center justify-between cursor-pointer rounded-md hover:bg-yellow-300 focus:bg-yellow-100">
-            <a href="#" class="font-medium uppercase tracking-widest">Expenses</a>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd"
-                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                    clip-rule="evenodd" />
-            </svg>
-        </div>
+        <a href="/expenses" class="font-medium uppercase tracking-widest">
+            <div
+                class=" {{ Request::is('expenses') ? 'bg-yellow-400' : '' }} p-3 flex items-center justify-between cursor-pointer rounded-md hover:bg-yellow-300 focus:bg-yellow-100">
+                <span>Expenses</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd" />
+                </svg>
+            </div>
+        </a>
 
         <hr />
 

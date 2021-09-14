@@ -9,7 +9,16 @@
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <!--Use LARAPEX Charts Here-->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <style>
+        .turbolinks-progress-bar {
+            height: 5px;
+            background-color: #E0BE36;
+        }
+
+    </style>
 
     @livewireStyles
 </head>
