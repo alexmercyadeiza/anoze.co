@@ -43,7 +43,7 @@
                         <div class="flex items-center">
                             <span>
                                 <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="h-5 w-5 text-green-500 transform rotate-45" viewBox="0 0 20 20"
+                                    class="h-5 w-5 text-yellow-500 transform rotate-45" viewBox="0 0 20 20"
                                     fill="currentColor">
                                     <path fill-rule="evenodd"
                                         d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z"
@@ -83,7 +83,7 @@
                         <div class="flex items-center">
                             <span>
                                 <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="h-5 w-5 text-green-500 transform rotate-45" viewBox="0 0 20 20"
+                                    class="h-5 w-5 text-yellow-500 transform rotate-45" viewBox="0 0 20 20"
                                     fill="currentColor">
                                     <path fill-rule="evenodd"
                                         d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z"
@@ -99,6 +99,39 @@
     </div>
     <!--End Prices-->
 
+    <div class="p-8">
+        <div class="alert bg-yellow-200">
+            <div class="flex-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    class="flex-shrink-0 w-6 h-6 mx-2 text-gray-900">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+                    </path>
+                </svg>
+                <label>
+                    <h4 class="text-gray-900 uppercase font-bold text-sm">Beta 1.0</h4>
+                    <p class="text-xs">
+                        This is a beta software. Report bugs here: <a href="mailto:help@anoze.co"
+                            class="underline">
+                            help@anoze.co</a>
+                    </p>
+                </label>
+            </div>
+            <div class="flex-none">
+
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6 stroke-current cursor-pointer text-yellow-500 hover:text-yellow-900"
+                    viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                        clip-rule="evenodd" />
+                </svg>
+
+            </div>
+        </div>
+
+    </div>
+
     <!--Chart-->
     <div class=" border-b">
         <div class="p-8">
@@ -111,7 +144,7 @@
 
     <!--Recent Payments-->
     <div class="mt-8 ml-8">
-        <p class="tracking-tight text-xl font-bold uppercase tracking-wider">Recent payments</p>
+        <p class="tracking-tight text-xl mb-3 md:mb-0 font-bold uppercase tracking-wider">Recent payments</p>
     </div>
     <div class="md:p-6 lg:p-6">
         <div class=" overflow-x-auto sm:-mx-6">
@@ -143,7 +176,7 @@
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <div class="flex items-center">
                                         <div class="flex-shrink-0 h-10 w-10">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-600"
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-yellow-600"
                                                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -179,7 +212,7 @@
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <div class="flex items-center">
                                         <div class="flex-shrink-0 h-10 w-10">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-600"
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-yellow-600"
                                                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -215,7 +248,7 @@
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <div class="flex items-center">
                                         <div class="flex-shrink-0 h-10 w-10">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-600"
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-yellow-600"
                                                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -274,7 +307,6 @@
                 class="tracking-wider font-bold">+ 234 703 248 2790</span></p>
     </div>
 </div>
-
 
 
 <script>
