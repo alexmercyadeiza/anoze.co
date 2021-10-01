@@ -351,7 +351,7 @@
     </div>
     <!--End Recent Payments-->
 
-    <!--Navigation-->
+    <!--Button-->
     <div class="p-8">
         <button class="btn btn-outline flex items-center space-x-2">
             <span> View all payments </span>

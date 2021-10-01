@@ -6,10 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="The retail gas industry managment software." />
     <meta name="tags" content="Petrol, Gas, Diesel, Kerosene" />
+    <meta name="turbolinks-visit-control" content="reload">
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <style>
+        .turbolinks-progress-bar {
+            height: 5px;
+            background-color: #E0BE36;
+        }
+
+    </style>
 
     @livewireStyles
 </head>

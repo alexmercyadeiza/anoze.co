@@ -40,6 +40,17 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'manager' => [
+            'driver' => 'session',
+            'provider' => 'managers',
+        ],
+
+        'director' => [
+            'driver' => 'session',
+            'provider' => 'directors',
+        ],
+
     ],
 
     /*
@@ -69,6 +80,17 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
+
+        'managers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Manager::class,
+        ],
+
+        'directors' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Directors::class,
+        ],
+
     ],
 
     /*
@@ -89,6 +111,20 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
+        'managers' => [
+            'provider' => 'managers',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
+        'directors' => [
+            'provider' => 'directors',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,

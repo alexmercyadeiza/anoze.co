@@ -24,16 +24,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', Login::class);
+Route::get('/login', Login::class)->name('manager.auth.login');
 
-Route::get('/manager', Dashboard::class);
-Route::get('/upload', Upload::class);
-Route::get('/payments', Payments::class);
-Route::get('/expenses', Expenses::class);
-//Use the name so the nav item is highlighted.
-Route::get('/record/sales', RecordSales::class);
-
-
-//Director
+// Director Routes
+Route::group(['middleware' => 'auth:director'], function () {
+});
 
 Route::get('/director', DirectorDashboard::class);
+
+// Admin Routes
+Route::group(['middleware' => 'auth:manager'], function () {
+    Route::get('/manager', Dashboard::class);
+    Route::get('/upload', Upload::class);
+    Route::get('/payments', Payments::class);
+    Route::get('/expenses', Expenses::class);
+    //Use the name so the nav item is highlighted.
+    Route::get('/record/sales', RecordSales::class);
+    Route::get('/logout/manager', [Dashboard::class, 'destroy']);
+});

@@ -1,4 +1,4 @@
-<div class=" border-r hidden lg:block sticky top-0 h-screen">
+<div class="bg-gray-700 hidden lg:block sticky top-0 h-screen">
     <div class="p-8 bg-gray-900">
         <div class="flex items-center space-x-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-yellow-500" viewBox="0 0 20 20"
@@ -18,7 +18,7 @@
 
         <a href="/director" class="font-medium uppercase tracking-widest">
             <div
-                class="{{ Request::is('director') ? 'bg-yellow-400' : '' }} p-3  border-gray-300 flex items-center justify-between cursor-pointer rounded-md hover:border-gray-900 hover:rounded-md hover:bg-yellow-200 hover:text-gray-900 focus:bg-yellow-100">
+                class="{{ Request::is('director') ? 'bg-yellow-400' : 'text-white' }} p-3  border-gray-300 flex items-center justify-between cursor-pointer rounded-md hover:border-gray-900 hover:rounded-md hover:bg-yellow-200 hover:text-gray-900 focus:bg-yellow-100">
                 <div class="items-center space-x-3 flex">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-500" viewBox="0 0 20 20"
                         fill="currentColor">
@@ -28,22 +28,20 @@
                     <span>Home</span>
                 </div>
 
-
             </div>
         </a>
 
-        <a href="/upload" class="font-medium uppercase tracking-widest">
+        <a href="/director" class="font-medium uppercase tracking-widest">
             <div
-                class="{{ Request::is('upload') ? 'bg-yellow-400' : '' }} p-3 flex  items-center justify-between cursor-pointer rounded-md hover:border-gray-900 hover:rounded-md hover:bg-yellow-200 hover:text-gray-900 focus:bg-yellow-100">
+                class="{{ Request::is('upload') ? 'bg-yellow-400' : 'text-white' }} p-3  border-gray-300 flex items-center justify-between cursor-pointer rounded-md hover:border-gray-900 hover:rounded-md hover:bg-yellow-200 hover:text-gray-900 focus:bg-yellow-100">
                 <div class="items-center space-x-3 flex">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-500" viewBox="0 0 20 20"
+                    <svg xmlns="http://www.w3.org/2000/svg" class="hh-4 w-4 text-yellow-500" viewBox="0 0 20 20"
                         fill="currentColor">
-                        <path
-                            d="M5.5 13a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 13H11V9.413l1.293 1.293a1 1 0 001.414-1.414l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13H5.5z" />
-                        <path d="M9 13h2v5a1 1 0 11-2 0v-5z" />
+                        <path fill-rule="evenodd"
+                            d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
+                            clip-rule="evenodd" />
                     </svg>
-                    <span> Receipts </span>
+                    <span>Stations</span>
                 </div>
 
             </div>
@@ -51,7 +49,7 @@
 
         <a href="/upload" class="font-medium uppercase tracking-widest mt-6">
             <div
-                class="{{ Request::is('upload') ? 'bg-yellow-400' : '' }} p-3 flex  items-center justify-between cursor-pointer rounded-md hover:border-gray-900 hover:rounded-md hover:bg-yellow-200 hover:text-gray-900 focus:bg-yellow-100">
+                class="{{ Request::is('upload') ? 'bg-yellow-400' : 'text-white' }} p-3 flex  items-center justify-between cursor-pointer rounded-md hover:border-gray-900 hover:rounded-md hover:bg-yellow-200 hover:text-gray-900 focus:bg-yellow-100">
                 <div class="items-center space-x-3 flex">
 
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-500" viewBox="0 0 20 20"
@@ -68,7 +66,7 @@
 
         <a href="/upload" class="font-medium uppercase tracking-widest mt-6">
             <div
-                class="{{ Request::is('upload') ? 'bg-yellow-400' : '' }} p-3 flex  items-center justify-between cursor-pointer rounded-md hover:border-gray-900 hover:rounded-md hover:bg-yellow-200 hover:text-gray-900 focus:bg-yellow-100">
+                class="{{ Request::is('upload') ? 'bg-yellow-400' : 'text-white' }} p-3 flex  items-center justify-between cursor-pointer rounded-md hover:border-gray-900 hover:rounded-md hover:bg-yellow-200 hover:text-gray-900 focus:bg-yellow-100">
                 <div class="items-center space-x-3 flex">
 
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-500" viewBox="0 0 20 20"
@@ -84,7 +82,7 @@
 
         <a href="/upload" class="font-medium uppercase tracking-widest mt-6">
             <div
-                class="{{ Request::is('upload') ? 'bg-yellow-400' : '' }} p-3 flex  items-center justify-between cursor-pointer rounded-md hover:border-gray-900 hover:rounded-md hover:bg-yellow-200 hover:text-gray-900 focus:bg-yellow-100">
+                class="{{ Request::is('upload') ? 'bg-yellow-400' : 'text-white' }} p-3 flex  items-center justify-between cursor-pointer rounded-md hover:border-gray-900 hover:rounded-md hover:bg-yellow-200 hover:text-gray-900 focus:bg-yellow-100">
                 <div class="items-center space-x-3 flex">
 
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-500" viewBox="0 0 20 20"
