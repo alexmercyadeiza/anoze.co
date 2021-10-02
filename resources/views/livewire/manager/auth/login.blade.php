@@ -41,7 +41,7 @@
                         </div>
 
                         <div class="col-span-6 sm:col-span-3">
-                            <label for="first-name" class="block text-sm font-medium text-gray-700">Pin</label>
+                            <label class="block text-sm font-medium text-gray-700">Pin</label>
                             <input type="password" wire:model.defer="password"
                                 class="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm lg:text-3xl border-gray-300" />
                             @error('password')

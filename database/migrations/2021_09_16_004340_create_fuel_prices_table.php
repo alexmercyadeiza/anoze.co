@@ -15,7 +15,8 @@ class CreateFuelPricesTable extends Migration
     {
         Schema::create('fuel_prices', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('fid');
+            // No need for the fid
+            //$table->unsignedBigInteger('fid');
             $table->unsignedBigInteger('cid');
             $table->char('petrol');
             $table->char('kerosene');

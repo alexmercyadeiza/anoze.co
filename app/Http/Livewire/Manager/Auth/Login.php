@@ -13,7 +13,7 @@ class Login extends Component
     private $login_err = 'Invalid account login details.';
 
     protected $rules = [
-        'email' => 'required|email',
+        'email' => 'required',
         'password' => 'required',
     ];
 

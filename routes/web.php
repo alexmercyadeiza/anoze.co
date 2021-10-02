@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Livewire\Director\Dashboard as DirectorDashboard;
+use App\Http\Livewire\Director\Stations;
 use App\Http\Livewire\Manager\Auth\Login;
 use App\Http\Livewire\Manager\Dashboard;
 use App\Http\Livewire\Manager\Expenses;
@@ -31,6 +32,7 @@ Route::group(['middleware' => 'auth:director'], function () {
 });
 
 Route::get('/director', DirectorDashboard::class);
+Route::get('/stations', Stations::class);
 
 // Admin Routes
 Route::group(['middleware' => 'auth:manager'], function () {

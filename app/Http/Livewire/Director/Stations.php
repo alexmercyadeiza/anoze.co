@@ -8,6 +8,6 @@ class Stations extends Component
 {
     public function render()
     {
-        return view('livewire.director.stations');
+        return view('livewire.director.stations')->layout('layouts.director.app');
     }
 }
