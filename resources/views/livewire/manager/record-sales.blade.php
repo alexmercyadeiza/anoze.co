@@ -11,7 +11,6 @@
                     </svg>
                 </a>
             </div>
-
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -47,37 +46,38 @@
             <div class="grid grid-cols-2 gap-6">
                 <div>
                     <label for="first-name" class="block font-bold font-medium text-gray-700">Petrol</label>
-                    <input type="text" wire:model="petrol"
-                        class="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm lg:text-3xl @error('petrol') border-red-500 @enderror border-gray-300"
+                    <input type="text" wire:model.defer="petrol"
+                        class="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm lg:text-xl @error('petrol') border-red-500 @enderror border-gray-300"
                         placeholder="Type (0) if no sales." />
                 </div>
 
                 <div>
                     <label for="first-name" class="block font-bold font-medium text-gray-700">Diesel</label>
-                    <input type="text" wire:model="diesel"
-                        class="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm lg:text-3xl @error('diesel') border-red-500 @enderror border-gray-300"
+                    <input type="text" wire:model.defer="diesel"
+                        class="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm lg:text-xl @error('diesel') border-red-500 @enderror border-gray-300"
                         placeholder="Type (0) if no sales." />
                 </div>
 
                 <div>
                     <label for="first-name" class="block font-bold font-medium text-gray-700">Kerosene</label>
-                    <input type="text" wire:model="kerosene"
-                        class="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm lg:text-3xl @error('kerosene') border-red-500 @enderror border-gray-300"
+                    <input type="text" wire:model.defer="kerosene"
+                        class="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm lg:text-xl @error('kerosene') border-red-500 @enderror border-gray-300"
                         placeholder="Type (0) if no sales." />
 
                 </div>
 
                 <div>
                     <label for="first-name" class="block font-bold font-medium text-gray-700">Gas (Kg)</label>
-                    <input type="text" wire:model="gas"
-                        class="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm lg:text-3xl @error('gas') border-red-500 @enderror border-gray-300"
+                    <input type="text" wire:model.defer="gas"
+                        class="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm lg:text-xl @error('gas') border-red-500 @enderror border-gray-300"
                         placeholder="Type (0) if no sales." />
                 </div>
             </div>
         </div>
         <!--Navigation-->
-        <div class="p-8 flex items-center space-x-3">
-            <button type="submit" class="btn btn-outline btn-lg flex items-center space-x-2">
+        <div class="px-8 flex items-center space-x-3">
+            <button type="submit"
+                class="btn bg-yellow-400 border-none text-black hover:text-white flex items-center space-x-2">
 
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
@@ -96,5 +96,4 @@
                 class="text-green-600 text-xl">Saved!</span>
         </div>
     </form>
-
 </div>

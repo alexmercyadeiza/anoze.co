@@ -14,6 +14,9 @@ php artisan storage:link
 The [-/anoze/public/storage] link has been connected to [-/anoze/storage/app/public].
 The links have been created.
 
+-> Fixed all buttons, + a ton of other micro-fixes
+-> Fuel Levels not fixed yet
+
 
 <!--
           _____ _           __      _                  _         _                    _                         _

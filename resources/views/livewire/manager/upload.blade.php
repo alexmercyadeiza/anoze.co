@@ -38,14 +38,42 @@
                     </div>
                 @endif
 
-                <div class="md:w-1/4 lg:w-1/4">
-                    <p class="uppercase text-sm font-bold text-wider">Teller Date</p>
-                    <input type="date" wire:model="date"
-                        class="mt-1 block w-full text-xl rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
+                <div class="grid grid-cols-2 gap-6">
+                    <div>
+                        <p class=" uppercase text-sm font-bold text-wider mb-3">
+                            Teller Date</p>
+                        <input type="date" wire:model.defer="date"
+                            class="mt-1 block w-full text-xl @error('date') border-red-600 @enderror border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
+                    </div>
+
+                    <div>
+                        <p class=" uppercase text-sm font-bold text-wider mb-3">
+                            Select Bank</p>
+
+                        <select wire:model.defer="bank"
+                            class="block w-full border @error('bank') border-red-600 @enderror border-gray-300 bg-white  shadow-sm focus:outline-none focus:ring-yellow-500 focus:border-gray-500 text-sm md:text-xl">
+                            <option selected>Select Bank</option>
+                            <option value="Guaranty Trust Bank">GTB</option>
+                            <option value="First Bank">First Bank</option>
+                            <option value="Unity Bank">Unity</option>
+                            <option value="United Bank for Africa">UBA</option>
+                        </select>
+
+                    </div>
                 </div>
 
-                <div>
-                    <button type="submit" class="btn btn-outline">+ Upload</button>
+                <div class="flex items-center space-x-3">
+                    <button type="submit"
+                        class="btn bg-yellow-400 border-none text-black hover:text-white flex items-center space-x-2">+
+                        Upload</button>
+
+                    <span x-data="{ open: false }" x-init="
+                        @this.on('notify-saved', () => {
+                            if (open === false) setTimeout(() => { open = false }, 2500);
+                            open = true;
+                        })
+                    " x-show.transition.out.duration.1000ms="open" style="display: none;"
+                        class="text-green-600 text-xl">Saved!</span>
                 </div>
             </div>
         </form>
@@ -70,10 +98,10 @@
                                         class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         Teller Date
                                     </th>
-                                    <th scope="col"
+                                    <!--<th scope="col"
                                         class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         Bank
-                                    </th>
+                                    </th>-->
 
                                     <th scope="col"
                                         class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -82,8 +110,11 @@
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
                                 @foreach ($uploads as $upload)
-                                    <tr>
-                                        <td class="px-6 py-4 whitespace-nowrap">
+                                    <tr class="hover:bg-gray-50 cursor-pointer"
+                                        wire:click="image({{ $upload->created_at }})">
+
+
+                                        <td class="px-6 py-4 whitespace-nowrap ">
                                             <div class="flex items-center">
                                                 <div class="flex-shrink-0 h-10 w-10">
                                                     <svg xmlns="http://www.w3.org/2000/svg"
@@ -102,9 +133,10 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="px-6 py-4 whitespace-nowrap">
+
+                                        <!--<td class="px-6 py-4 whitespace-nowrap">
                                             <div class="text-gray-900">Guaranty Trust Bank</div>
-                                        </td>
+                                        </td>-->
 
                                         <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                             <a class="btn btn-xs btn-neutral rounded"
@@ -120,8 +152,9 @@
                                                         d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                                                 </svg>
                                             </a>
-
                                         </td>
+
+
                                     </tr>
 
                                 @endforeach

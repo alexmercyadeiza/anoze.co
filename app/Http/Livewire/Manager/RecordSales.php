@@ -46,19 +46,31 @@ class RecordSales extends Component
             $prices = FuelPrices::select('kerosene', 'petrol', 'gas', 'diesel')->where('cid', $cid)->get();
 
             // Get new price values
-            $this->petrol = $this->petrol * $prices[0]->petrol;
-            $this->kerosene = $this->kerosene * $prices[0]->kerosene;
-            $this->gas = $this->gas * $prices[0]->gas;
-            $this->diesel = $this->diesel * $prices[0]->diesel;
+            $petrol_amount = $this->petrol * $prices[0]->petrol;
+            $kerosene_amount = $this->kerosene * $prices[0]->kerosene;
+            $gas_amount = $this->gas * $prices[0]->gas;
+            $diesel_amount = $this->diesel * $prices[0]->diesel;
+
+            //sum total
+            $total = $petrol_amount + $gas_amount + $kerosene_amount + $diesel_amount;
 
             //Store the sales for the current day
             Sales::create([
                 'fid' => $fid,
                 'cid' => $cid,
-                'kerosene' => $this->kerosene,
-                'gas' => $this->gas,
-                'diesel' => $this->diesel,
-                'petrol' => $this->petrol
+                'kerosene' => $kerosene_amount,
+                'gas' => $gas_amount,
+                'diesel' => $diesel_amount,
+                'petrol' => $petrol_amount,
+
+                'petrol_ltr' => $this->petrol,
+                'diesel_ltr' => $this->diesel,
+                'gas_kg' => $this->gas,
+                'kerosene_ltr' => $this->kerosene,
+
+                'total' => $total,
+
+                'created_at' => Carbon::parse()->toDateString(),
             ]);
 
             $this->reset();

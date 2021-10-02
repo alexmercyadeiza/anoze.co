@@ -15,11 +15,14 @@ class Upload extends Component
 
     public $teller;
     public $date;
+    public $bank;
 
     public function save()
     {
         $this->validate([
             'teller' => 'image|max:1024|mimes:jpg,jpeg,png', // 1MB Max
+            'bank' => 'required',
+            'date' => 'required',
         ]);
 
         $this->teller->storeAs('public/tellers', 'teller-' . time() . '.' . $this->teller->getClientOriginalExtension());
@@ -29,7 +32,17 @@ class Upload extends Component
             'cid' => 1,
             'created_at' => $this->date,
             'file' => 'teller-' . time() . '.' . $this->teller->getClientOriginalExtension(),
+            'bank' => $this->bank,
         ]);
+
+        $this->emitSelf('notify-saved');
+
+        $this->reset();
+    }
+
+    public function image(Upload $upload)
+    {
+        redirect('/' . $upload);
     }
 
     public function render()

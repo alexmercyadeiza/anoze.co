@@ -13,12 +13,14 @@
     </div>
 
     <div class="p-8">
-        <a class="btn btn-outline lg:w-1/4 flex items-center space-x-2" href="/record/sales">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mb-1" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-            </svg>
-            <span>Record Sales </span>
+        <a href="/record/sales">
+            <button class="btn bg-yellow-400 border-none text-black hover:text-white flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mb-1" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+                <span>Record Sales </span>
+            </button>
         </a>
     </div>
 
@@ -49,65 +51,65 @@
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
-                            <tr>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="flex items-center">
-                                        <div class="flex-shrink-0 h-10 w-10">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-yellow-600"
-                                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                            </svg>
-                                        </div>
-                                        <div class="ml-4">
-                                            <div class="text-sm font-medium text-gray-900">
-                                                Monday, 12th August, 2021
+
+                            @foreach ($sales as $sale)
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-10 w-10">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    class="h-10 w-10 text-yellow-600" fill="none" viewBox="0 0 24 24"
+                                                    stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                                </svg>
                                             </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-medium text-gray-900">
+                                                    {{ Carbon\Carbon::parse($sale->created_at)->toFormattedDateString() }}
+                                                </div>
 
+                                            </div>
                                         </div>
-                                    </div>
-                                </td>
-
-                                <td class="px-6 py-4 colspan-3 whitespace-nowrap">
-
-                                    <div class="md:grid md:grid-cols-3 md:gap-3 flex space-x-6">
-                                        <div>Petrol</div>
-                                        <div>100 (Ltrs)</div>
-                                        <div>₦ 100,000.00</div>
-                                    </div>
-
-                                    <div class="md:grid md:grid-cols-3 md:gap-3 flex space-x-6">
-                                        <div>Kero</div>
-                                        <div>100 (Ltrs)</div>
-                                        <div>₦ 100,000.00</div>
-                                    </div>
-
-                                    <div class="md:grid md:grid-cols-3 md:gap-3 flex space-x-6">
-                                        <div>Gas</div>
-                                        <div>100 (Kg)</div>
-                                        <div>₦ 100,000.00</div>
-                                    </div>
-
-                                    <div class="md:grid md:grid-cols-3 md:gap-3 flex space-x-6">
-                                        <div>Diesel</div>
-                                        <div>100 (Ltrs)</div>
-                                        <div>₦ 100,000.00</div>
-                                    </div>
-
-                                    <!-- More Items -->
-
-
-                                    <!-- Total Amount -->
-                                    <div class="md:grid md:grid-cols-3 md:gap-3 flex space-x-6 mt-3">
-                                        <div class="font-bold uppercase col-span-2">
-                                            Total
+                                    </td>
+                                    <td class="px-6 py-4 colspan-3 whitespace-nowrap">
+                                        <div class="md:grid md:grid-cols-3 md:gap-3 flex space-x-6">
+                                            <div>Petrol</div>
+                                            <div>{{ $sale->petrol_ltr }} (Ltrs)</div>
+                                            <div>₦ {{ number_format($sale->petrol, 2) }}</div>
                                         </div>
-                                        <div class="font-bold">₦ 100,000.00</div>
-                                    </div>
-                                </td>
-                            </tr>
 
+                                        <div class="md:grid md:grid-cols-3 md:gap-3 flex space-x-6">
+                                            <div>Kero</div>
+                                            <div>{{ $sale->kerosene_ltr }} (Ltrs)</div>
+                                            <div>₦ {{ number_format($sale->kerosene, 2) }}</div>
+                                        </div>
 
+                                        <div class="md:grid md:grid-cols-3 md:gap-3 flex space-x-6">
+                                            <div>Gas</div>
+                                            <div>{{ $sale->gas_kg }} (Kg)</div>
+                                            <div>₦ {{ number_format($sale->gas, 2) }}</div>
+                                        </div>
+
+                                        <div class="md:grid md:grid-cols-3 md:gap-3 flex space-x-6">
+                                            <div>Diesel</div>
+                                            <div>{{ $sale->diesel_ltr }} (Ltrs)</div>
+                                            <div>₦ {{ number_format($sale->diesel, 2) }}</div>
+                                        </div>
+
+                                        <!-- More Items -->
+
+                                        <!-- Total Amount -->
+                                        <div class="md:grid md:grid-cols-3 md:gap-3 flex space-x-6 mt-3">
+                                            <div class="font-bold uppercase col-span-2">
+                                                Total
+                                            </div>
+                                            <div class="font-bold">₦ {{ number_format($sale->total, 2) }}</div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            @endforeach
 
                         </tbody>
                     </table>
@@ -117,19 +119,9 @@
         </div>
 
     </div>
-    <!--End Recent Payments-->
 
-
-
-    <!--Navigation-->
     <div class="p-8">
-        <button class="btn btn-outline flex items-center space-x-2">
-            <span> Next </span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-        </button>
+        {{ $sales->links() }}
     </div>
 
 </div>
