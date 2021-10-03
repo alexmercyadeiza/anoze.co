@@ -16,9 +16,12 @@
 <body class="antialiased">
     <div class="relative flex items-top justify-center min-h-screen dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
         <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-            <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                <div class="ml-4 text-center text-gray-500 sm:text-right sm:ml-0">
-                    Built with &hearts; in Nigeria.
+            <div class="space-y-4 mt-4 sm:items-center sm:justify-between">
+                <div class="font-bold text-center text-gray-900">
+                    Anoze.co Energy Management App
+                </div>
+                <div class="text-center text-gray-500 sm:ml-0">
+                    Built with <span class="text-red-600">&hearts;</span> in Nigeria.
                 </div>
             </div>
         </div>

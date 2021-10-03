@@ -88,7 +88,7 @@ return [
 
         'directors' => [
             'driver' => 'eloquent',
-            'model' => App\Models\Directors::class,
+            'model' => App\Models\Director::class,
         ],
 
     ],

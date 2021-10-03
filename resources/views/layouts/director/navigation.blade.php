@@ -31,9 +31,9 @@
             </div>
         </a>
 
-        <a href="/stations" class="font-medium uppercase tracking-widest">
+        <!--<a href="/director/stations" class="font-medium uppercase tracking-widest">
             <div
-                class="{{ Request::is('stations') ? 'bg-yellow-400' : 'text-white' }} p-3  border-gray-300 flex items-center justify-between cursor-pointer rounded-md hover:border-gray-900 hover:rounded-md hover:bg-yellow-200 hover:text-gray-900 focus:bg-yellow-100">
+                class="{{ Request::is('director/stations') ? 'bg-yellow-400' : 'text-white' }} p-3  border-gray-300 flex items-center justify-between cursor-pointer rounded-md hover:border-gray-900 hover:rounded-md hover:bg-yellow-200 hover:text-gray-900 focus:bg-yellow-100">
                 <div class="items-center space-x-3 flex">
                     <svg xmlns="http://www.w3.org/2000/svg" class="hh-4 w-4 text-yellow-500" viewBox="0 0 20 20"
                         fill="currentColor">
@@ -43,13 +43,12 @@
                     </svg>
                     <span>Stations</span>
                 </div>
-
             </div>
-        </a>
+        </a>-->
 
-        <a href="/upload" class="font-medium uppercase tracking-widest mt-6">
+        <a href="/director/payments" class="font-medium uppercase tracking-widest mt-6">
             <div
-                class="{{ Request::is('upload') ? 'bg-yellow-400' : 'text-white' }} p-3 flex  items-center justify-between cursor-pointer rounded-md hover:border-gray-900 hover:rounded-md hover:bg-yellow-200 hover:text-gray-900 focus:bg-yellow-100">
+                class="{{ Request::is('director/payments') ? 'bg-yellow-400' : 'text-white' }} p-3 flex  items-center justify-between cursor-pointer rounded-md hover:border-gray-900 hover:rounded-md hover:bg-yellow-200 hover:text-gray-900 focus:bg-yellow-100">
                 <div class="items-center space-x-3 flex">
 
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-500" viewBox="0 0 20 20"
@@ -60,13 +59,12 @@
                     </svg>
                     <span> Payments </span>
                 </div>
-
             </div>
         </a>
 
-        <a href="/upload" class="font-medium uppercase tracking-widest mt-6">
+        <!--<a href="/director/expenses" class="font-medium uppercase tracking-widest mt-6">
             <div
-                class="{{ Request::is('upload') ? 'bg-yellow-400' : 'text-white' }} p-3 flex  items-center justify-between cursor-pointer rounded-md hover:border-gray-900 hover:rounded-md hover:bg-yellow-200 hover:text-gray-900 focus:bg-yellow-100">
+                class="{{ Request::is('director/expenses') ? 'bg-yellow-400' : 'text-white' }} p-3 flex  items-center justify-between cursor-pointer rounded-md hover:border-gray-900 hover:rounded-md hover:bg-yellow-200 hover:text-gray-900 focus:bg-yellow-100">
                 <div class="items-center space-x-3 flex">
 
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-500" viewBox="0 0 20 20"
@@ -78,11 +76,11 @@
                 </div>
 
             </div>
-        </a>
+        </a>-->
 
-        <a href="/upload" class="font-medium uppercase tracking-widest mt-6">
+        <a href="/director/prices" class="font-medium uppercase tracking-widest mt-6">
             <div
-                class="{{ Request::is('upload') ? 'bg-yellow-400' : 'text-white' }} p-3 flex  items-center justify-between cursor-pointer rounded-md hover:border-gray-900 hover:rounded-md hover:bg-yellow-200 hover:text-gray-900 focus:bg-yellow-100">
+                class="{{ Request::is('director/prices') ? 'bg-yellow-400' : 'text-white' }} p-3 flex  items-center justify-between cursor-pointer rounded-md hover:border-gray-900 hover:rounded-md hover:bg-yellow-200 hover:text-gray-900 focus:bg-yellow-100">
                 <div class="items-center space-x-3 flex">
 
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-500" viewBox="0 0 20 20"

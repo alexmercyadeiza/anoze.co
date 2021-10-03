@@ -135,7 +135,7 @@
         </div>
     </div>-->
 
-    <!--Chart-->
+    <!--Chart
     <div class=" border-b">
         <div class="p-8">
             <p class=" tracking-tight text-xl font-bold uppercase tracking-wider">Fuel
@@ -143,7 +143,7 @@
         </div>
 
         <div class="p-4" id="chart"></div>
-    </div>
+    </div>-->
 
     <!--Recent Payments-->
     <div class="mt-8 ml-8">

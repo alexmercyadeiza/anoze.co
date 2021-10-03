@@ -3,11 +3,13 @@
         <div class="p-8 flex items-center justify-between">
             <p class="tracking-tight text-3xl font-bold uppercase tracking-wider">Dashboard</p>
 
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-            </svg>
+            <a href="/director/logout">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                </svg>
+            </a>
         </div>
     </div>
 
@@ -16,85 +18,47 @@
 
         <!--Prices-->
         <div class="grid grid-cols-4">
-            <div class="p-3 border-r grid col-span-1 place">
-                <div class="grid grid-cols-1 place-items-center">
-                    <p class="text-gray-600 text-sm tracking-tight">Kero</p>
-                    <div class="md:flex lg:flex items-center text-gray-600 text-2xl tracking-tight">
-                        <span class="font-bold">600</span>
-                        <div class="flex items-center">
-                            <span><svg xmlns="
-                                http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 transform rotate-45"
-                                    viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 012 0v7.586l2.293-2.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg></span>
-                            <span class="text-xs">0.2%</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @foreach ($prices as $price)
+                <div class="p-3 border-r grid col-span-1 place">
+                    <div class="grid grid-cols-1 place-items-center">
+                        <p class="text-gray-600 text-sm tracking-tight">Kero</p>
+                        <div class="md:flex lg:flex items-center text-gray-600 text-2xl tracking-tight">
+                            <span class="font-bold">{{ $price->kerosene }}</span>
 
-            <div class="p-3 border-r grid col-span-1 place">
-                <div class="grid grid-cols-1 place-items-center">
-                    <p class=" text-gray-600 text-sm tracking-tight">Diesel</p>
-                    <div class="md:flex lg:flex items-center text-gray-600 text-2xl tracking-tight">
-                        <span class="font-bold">450</span>
-                        <div class="flex items-center">
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="h-5 w-5 text-yellow-500 transform rotate-45" viewBox="0 0 20 20"
-                                    fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </span>
-                            <span class="text-xs">1.9%</span>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="p-3 border-r grid col-span-1 place">
-                <div class="grid grid-cols-1 place-items-center">
-                    <p class="text-gray-600 text-sm tracking-tight">PMS</p>
-                    <div class="md:flex lg:flex items-center text-gray-600 text-2xl tracking-tight">
-                        <span class="font-bold">410</span>
-                        <div class="flex items-center">
-                            <span><svg xmlns="
-                                http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 transform rotate-45"
-                                    viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 012 0v7.586l2.293-2.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg></span>
-                            <span class="text-xs">0.2%</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <div class="p-3 border-r grid col-span-1 place">
+                    <div class="grid grid-cols-1 place-items-center">
+                        <p class=" text-gray-600 text-sm tracking-tight">Diesel</p>
+                        <div class="md:flex lg:flex items-center text-gray-600 text-2xl tracking-tight">
+                            <span class="font-bold">{{ $price->diesel }}</span>
 
-            <div class="p-3 border-r grid col-span-1 place">
-                <div class="grid grid-cols-1 place-items-center">
-                    <p class=" text-gray-600 text-sm tracking-tight">Gas</p>
-                    <div class="md:flex lg:flex items-center text-gray-600 text-2xl tracking-tight">
-                        <span class="font-bold">250</span>
-                        <div class="flex items-center">
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="h-5 w-5 text-yellow-500 transform rotate-45" viewBox="0 0 20 20"
-                                    fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </span>
-                            <span class="text-xs">1.9%</span>
                         </div>
                     </div>
                 </div>
-            </div>
+
+                <div class="p-3 border-r grid col-span-1 place">
+                    <div class="grid grid-cols-1 place-items-center">
+                        <p class="text-gray-600 text-sm tracking-tight">PMS</p>
+                        <div class="md:flex lg:flex items-center text-gray-600 text-2xl tracking-tight">
+                            <span class="font-bold">{{ $price->petrol }}</span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-3 border-r grid col-span-1 place">
+                    <div class="grid grid-cols-1 place-items-center">
+                        <p class=" text-gray-600 text-sm tracking-tight">Gas</p>
+                        <div class="md:flex lg:flex items-center text-gray-600 text-2xl tracking-tight">
+                            <span class="font-bold">{{ $price->petrol }}</span>
+
+                        </div>
+                    </div>
+                </div>
+            @endforeach
         </div>
     </div>
     <!--End Prices-->
@@ -192,7 +156,7 @@
                                             </svg>
                                         </div>
                                         <div class="ml-4">
-                                            <div class="text-sm font-medium text-gray-900">
+                                            <div class="text-sm font-medium text-gray-300">
                                                 Okene
                                             </div>
 
@@ -200,56 +164,17 @@
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-gray-900">Guaranty Trust Bank</div>
+                                    <div class="text-gray-300">null</div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-gray-900">12th Sept, 2021</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-xl text-gray-900">₦ 1000.00</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <button class="btn btn-xs btn-neutral rounded">
-                                        Download Teller
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            class="inline-block w-4 h-4 ml-1 stroke-current">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M9 5l7 7-7 7"></path>
-                                        </svg>
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="flex items-center">
-                                        <div class="flex-shrink-0 h-10 w-10">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-500"
-                                                viewBox="0 0 20 20" fill="currentColor">
-                                                <path fill-rule="evenodd"
-                                                    d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </div>
-                                        <div class="ml-4">
-                                            <div class="text-sm font-medium text-gray-900">
-                                                Nagazi
-                                            </div>
-
-                                        </div>
+                                    <div class="text-gray-300">{{ Carbon\Carbon::parse()->toFormattedDateString() }}
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-gray-900">Guaranty Trust Bank</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-gray-900">12th Sept, 2021</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-xl text-gray-900">₦ 1000.00</div>
+                                    <div class="text-xl text-gray-300">₦ 00.0</div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <button class="btn btn-xs btn-neutral rounded">
+                                    <button class="btn btn-xs btn-neutral rounded" disabled>
                                         Download Teller
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             class="inline-block w-4 h-4 ml-1 stroke-current">
@@ -259,88 +184,6 @@
                                     </button>
                                 </td>
                             </tr>
-
-                            <tr>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="flex items-center">
-                                        <div class="flex-shrink-0 h-10 w-10">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-500"
-                                                viewBox="0 0 20 20" fill="currentColor">
-                                                <path fill-rule="evenodd"
-                                                    d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </div>
-                                        <div class="ml-4">
-                                            <div class="text-sm font-medium text-gray-900">
-                                                Lokoja
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-gray-900">Guaranty Trust Bank</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-gray-900">12th Sept, 2021</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-xl text-gray-900">₦ 1000.00</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <button class="btn btn-xs btn-neutral rounded">
-                                        Download Teller
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            class="inline-block w-4 h-4 ml-1 stroke-current">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M9 5l7 7-7 7"></path>
-                                        </svg>
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="flex items-center">
-                                        <div class="flex-shrink-0 h-10 w-10">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-500"
-                                                viewBox="0 0 20 20" fill="currentColor">
-                                                <path fill-rule="evenodd"
-                                                    d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </div>
-                                        <div class="ml-4">
-                                            <div class="text-sm font-medium text-gray-900">
-                                                Checkpoint
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-gray-900">Guaranty Trust Bank</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-gray-900">12th Sept, 2021</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-xl text-gray-900">₦ 1000.00</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <button class="btn btn-xs btn-neutral rounded">
-                                        Download Teller
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            class="inline-block w-4 h-4 ml-1 stroke-current">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M9 5l7 7-7 7"></path>
-                                        </svg>
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <!-- More people... -->
                         </tbody>
                     </table>
                 </div>
@@ -353,13 +196,16 @@
 
     <!--Button-->
     <div class="p-8">
-        <button class="btn btn-outline flex items-center space-x-2">
-            <span> View all payments </span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-        </button>
+        <a href="/director/payments">
+            <button class="btn bg-black hover:bg-yellow-400 border-none hover:text-black flex items-center space-x-2">
+                <span> View all payments </span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+            </button>
+        </a>
     </div>
 
     <div class="p-8 mt-10 border-t">

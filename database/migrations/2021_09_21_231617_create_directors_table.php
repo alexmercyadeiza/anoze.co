@@ -18,7 +18,7 @@ class CreateDirectorsTable extends Migration
             $table->string('name');
             $table->char('phone');
             $table->unsignedBigInteger('cid')->default(0);
-            $table->unsignedBigInteger('fid')->default(0);
+            //$table->unsignedBigInteger('fid')->default(0);
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

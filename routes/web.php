@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Livewire\Director\Auth\Login as AuthLogin;
 use App\Http\Livewire\Director\Dashboard as DirectorDashboard;
+use App\Http\Livewire\Director\Expenses as DirectorExpenses;
+use App\Http\Livewire\Director\Payments as DirectorPayments;
+use App\Http\Livewire\Director\Prices;
 use App\Http\Livewire\Director\Stations;
 use App\Http\Livewire\Manager\Auth\Login;
 use App\Http\Livewire\Manager\Dashboard;
@@ -25,14 +29,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/director/login', AuthLogin::class);
 Route::get('/login', Login::class)->name('manager.auth.login');
 
 // Director Routes
 Route::group(['middleware' => 'auth:director'], function () {
+    Route::get('/director', DirectorDashboard::class);
+    Route::get('/director/stations', Stations::class);
+    Route::get('/director/payments', DirectorPayments::class);
+    Route::get('/director/expenses', DirectorExpenses::class);
+    Route::get('/director/prices', Prices::class);
+    Route::get('/director/logout', [DirectorDashboard::class, 'destroy']);
 });
-
-Route::get('/director', DirectorDashboard::class);
-Route::get('/stations', Stations::class);
 
 // Admin Routes
 Route::group(['middleware' => 'auth:manager'], function () {
