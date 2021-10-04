@@ -158,7 +158,7 @@
                                         <div class="text-gray-900">{{ $expense->desc }}</div>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <div class="text-gray-900">₦ {{ number_format($expense->amount, 2) }}
+                                        <div class="text-gray-900">₦ {{ $expense->amount }}
                                         </div>
                                     </td>
                                     <td>
