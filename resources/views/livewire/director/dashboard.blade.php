@@ -53,7 +53,7 @@
                     <div class="grid grid-cols-1 place-items-center">
                         <p class=" text-gray-600 text-sm tracking-tight">Gas</p>
                         <div class="md:flex lg:flex items-center text-gray-600 text-2xl tracking-tight">
-                            <span class="font-bold">{{ $price->petrol }}</span>
+                            <span class="font-bold">{{ $price->gas }}</span>
 
                         </div>
                     </div>

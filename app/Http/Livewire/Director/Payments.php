@@ -52,7 +52,7 @@ class Payments extends Component
     {
         if ($this->sales_id) {
             $file = Tellers::where('fid', $this->sales_id)->where('created_at', $this->getDate())->select('file')->get();
-            return $file[0]->file;
+            return $file[0]->file ?? '';
         }
     }
 
