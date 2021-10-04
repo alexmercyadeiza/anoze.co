@@ -31,7 +31,8 @@
                                 <option value="{{ $station->id }}">{{ $station->branch }}</option>
                             @endforeach
                         </select>
-                        <div wire:loading wire:target="setFid" class="ml-3 animate-spin h-5 w-5 text-gray-400">
+
+                        <!--<div wire:loading wire:target="setFid" class="ml-6 animate-spin h-5 w-5 text-gray-400">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
                                     stroke-width="4" />
@@ -39,6 +40,16 @@
                                     d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
                             </svg>
                         </div>
+
+                        <div wire:loading wire:target="details" class="ml-6 animate-spin h-5 w-5 text-gray-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
+                                    stroke-width="4" />
+                                <path class="opacity-75" fill="currentColor"
+                                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                            </svg>
+                        </div>-->
+
                     </div>
                 </div>
             </div>
@@ -316,10 +327,10 @@
                                             Date
                                         </th>
 
-                                        <th scope="col"
+                                        <!--<th scope="col"
                                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             Amount
-                                        </th>
+                                        </th>-->
 
                                         <th scope="col"
                                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -346,9 +357,9 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="px-6 py-4 whitespace-nowrap">
+                                        <!--<td class="px-6 py-4 whitespace-nowrap">
                                             <div class="text-gray-900">₦ 1000.00</div>
-                                        </td>
+                                        </td>-->
                                         <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                             <button wire:click="details({{ $payment->id }})"
                                                 class="btn btn-xs btn-neutral">
