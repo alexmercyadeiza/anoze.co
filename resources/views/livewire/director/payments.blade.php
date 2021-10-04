@@ -264,7 +264,7 @@
                                                         {{ $expense->desc }}
                                                     </td>
                                                     <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                                        ₦ {{ number_format($expense->amount, 2) }}
+                                                        ₦ {{ $expense->amount }}
                                                     </td>
                                                 </tr>
                                             @endforeach
