@@ -46,21 +46,21 @@
             <div class="grid grid-cols-2 gap-6">
                 <div>
                     <label for="first-name" class="block font-bold font-medium text-gray-700">Petrol</label>
-                    <input type="text" wire:model.defer="petrol"
+                    <input type="text" wire:model.defer="petrol" onkeypress="return CheckNumeric()"
                         class="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm lg:text-xl @error('petrol') border-red-500 @enderror border-gray-300"
                         placeholder="Type (0) if no sales." />
                 </div>
 
                 <div>
                     <label for="first-name" class="block font-bold font-medium text-gray-700">Diesel</label>
-                    <input type="text" wire:model.defer="diesel"
+                    <input type="text" wire:model.defer="diesel" onkeypress="return CheckNumeric()"
                         class="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm lg:text-xl @error('diesel') border-red-500 @enderror border-gray-300"
                         placeholder="Type (0) if no sales." />
                 </div>
 
                 <div>
                     <label for="first-name" class="block font-bold font-medium text-gray-700">Kerosene</label>
-                    <input type="text" wire:model.defer="kerosene"
+                    <input type="text" wire:model.defer="kerosene" onkeypress="return CheckNumeric()"
                         class="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm lg:text-xl @error('kerosene') border-red-500 @enderror border-gray-300"
                         placeholder="Type (0) if no sales." />
 
@@ -68,7 +68,7 @@
 
                 <div>
                     <label for="first-name" class="block font-bold font-medium text-gray-700">Gas (Kg)</label>
-                    <input type="text" wire:model.defer="gas"
+                    <input type="text" wire:model.defer="gas" onkeypress="return CheckNumeric()"
                         class="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm lg:text-xl @error('gas') border-red-500 @enderror border-gray-300"
                         placeholder="Type (0) if no sales." />
                 </div>

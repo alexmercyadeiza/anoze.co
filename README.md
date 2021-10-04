@@ -8,7 +8,6 @@ This makes it easier for users to remember their login details.
 How did i do this?
 I stored the phone no. in the email column in my db field, and stored the 4-digit pin as the password.
 
-
 # Created a symbolic link using 
 php artisan storage:link
 The [-/anoze/public/storage] link has been connected to [-/anoze/storage/app/public].

@@ -57,6 +57,8 @@
                             <option value="First Bank">First Bank</option>
                             <option value="Unity Bank">Unity</option>
                             <option value="United Bank for Africa">UBA</option>
+                            <option value="Zenith Bank">Zenith</option>
+
                         </select>
 
                     </div>

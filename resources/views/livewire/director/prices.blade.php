@@ -26,7 +26,6 @@
                         <p class="text-gray-600 text-sm tracking-tight">Kero</p>
                         <div class="md:flex lg:flex items-center text-gray-600 text-2xl tracking-tight">
                             <span class="font-bold">{{ $price->kerosene }}</span>
-
                         </div>
                     </div>
                 </div>
@@ -36,7 +35,6 @@
                         <p class=" text-gray-600 text-sm tracking-tight">Diesel</p>
                         <div class="md:flex lg:flex items-center text-gray-600 text-2xl tracking-tight">
                             <span class="font-bold">{{ $price->diesel }}</span>
-
                         </div>
                     </div>
                 </div>
@@ -46,7 +44,6 @@
                         <p class="text-gray-600 text-sm tracking-tight">Petrol</p>
                         <div class="md:flex lg:flex items-center text-gray-600 text-2xl tracking-tight">
                             <span class="font-bold">{{ $price->petrol }}</span>
-
                         </div>
                     </div>
                 </div>
@@ -56,7 +53,6 @@
                         <p class=" text-gray-600 text-sm tracking-tight">Gas</p>
                         <div class="md:flex lg:flex items-center text-gray-600 text-2xl tracking-tight">
                             <span class="font-bold">{{ $price->gas }}</span>
-
                         </div>
                     </div>
                 </div>
@@ -80,28 +76,28 @@
                         @foreach ($prices as $price)
                             <div class="space-y-2">
                                 <label class="text-sm">Kerosene</label>
-                                <input type="text" wire:model.defer="kerosene"
+                                <input type="text" wire:model.defer="kerosene" onkeypress="return CheckNumeric()"
                                     class="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm lg:text-xl @error('petrol') border-red-500 @enderror border-gray-300"
                                     placeholder="{{ $price->kerosene }}" />
                             </div>
 
                             <div class="space-y-2">
                                 <label class="text-sm">Diesel</label>
-                                <input type="text" wire:model.defer="diesel"
+                                <input type="text" wire:model.defer="diesel" onkeypress="return CheckNumeric()"
                                     class="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm lg:text-xl @error('petrol') border-red-500 @enderror border-gray-300"
                                     placeholder="{{ $price->diesel }}" />
                             </div>
 
                             <div class="space-y-2">
                                 <label class="text-sm">Petrol</label>
-                                <input type="text" wire:model.defer="petrol"
+                                <input type="text" wire:model.defer="petrol" onkeypress="return CheckNumeric()"
                                     class="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm lg:text-xl @error('petrol') border-red-500 @enderror border-gray-300"
                                     placeholder="{{ $price->petrol }}" />
                             </div>
 
                             <div class="space-y-2">
                                 <label class="text-sm">Gas</label>
-                                <input type="text" wire:model.defer="gas"
+                                <input type="text" wire:model.defer="gas" onkeypress="return CheckNumeric()"
                                     class="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm lg:text-xl @error('petrol') border-red-500 @enderror border-gray-300"
                                     placeholder="{{ $price->gas }}" />
                             </div>

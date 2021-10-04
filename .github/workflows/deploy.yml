@@ -111,8 +111,10 @@ jobs:
                 # Share storage between different releases, we don't want to override server files, so we remove it from our release
                 script: |
                   tar xzf ${{ matrix.server.path }}/artifacts/${GITHUB_SHA}.tar.gz -C "${{ matrix.server.path }}/html"
-                  chmod -R 0777 ${{ matrix.server.path }}/html/storage
-                  chmod -R 0777 ${{ matrix.server.path }}/html/bootstrap
+
+                  rm -rf ${{ matrix.server.path }}/html/storage
+                  ln -s -f /var/www/storage /var/www/html
+
                   printf "%s" "$LARAVEL_ENV" > "${{ matrix.server.path }}/html/.env"
                   cd ${{ matrix.server.path }}/html && php artisan migrate && php artisan view:clear && php artisan cache:clear && php artisan config:clear
                   service php7.4-fpm reload

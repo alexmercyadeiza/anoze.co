@@ -52,7 +52,8 @@
                 @if ($type === 'cash')
                     <div>
                         <label class="block font-bold font-medium text-gray-700">Amount</label>
-                        <input type="text" wire:model.defer="cash"
+                        <input type="text" wire:model.defer="cash" onkeypress="return CheckNumeric()"
+                            onkeyup="FormatCurrency(this)"
                             class="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm lg:text-3xl @error('cash') border-red-600 @enderror border-gray-300" />
                     </div>
                 @endif
@@ -60,7 +61,7 @@
                 @if ($type === 'gas')
                     <div>
                         <label class="block font-bold font-medium text-gray-700">Kg</label>
-                        <input type="text" wire:model.defer="gas"
+                        <input type="text" wire:model.defer="gas" onkeypress="return CheckNumeric()"
                             class="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm lg:text-3xl @error('gas') border-red-600 @enderror  border-gray-300" />
                     </div>
                 @endif
@@ -68,7 +69,7 @@
                 @if ($type === 'diesel')
                     <div>
                         <label class="block font-bold font-medium text-gray-700">Ltrs</label>
-                        <input type="text" wire:model.defer="diesel"
+                        <input type="text" wire:model.defer="diesel" onkeypress="return CheckNumeric()"
                             class="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm lg:text-3xl @error('diesel') border-red-600 @enderror  border-gray-300" />
                     </div>
                 @endif
@@ -76,7 +77,7 @@
                 @if ($type === 'petrol')
                     <div>
                         <label class="block font-bold font-medium text-gray-700">Ltrs</label>
-                        <input type="text" wire:model.defer="petrol"
+                        <input type="text" wire:model.defer="petrol" onkeypress="return CheckNumeric()"
                             class="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm lg:text-3xl @error('petrol') border-red-600 @enderror  border-gray-300" />
                     </div>
                 @endif
@@ -84,7 +85,7 @@
                 @if ($type === 'kerosene')
                     <div>
                         <label class="block font-bold font-medium text-gray-700">Ltrs</label>
-                        <input type="text" wire:model.defer="kerosene"
+                        <input type="text" wire:model.defer="kerosene" onkeypress="return CheckNumeric()"
                             class="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm lg:text-3xl @error('kerosene') border-red-600 @enderror border-gray-300" />
                     </div>
                 @endif

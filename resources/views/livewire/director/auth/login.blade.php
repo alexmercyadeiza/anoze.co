@@ -32,7 +32,7 @@
                         <hr />
                         <div class="col-span-6 sm:col-span-3">
                             <label class="block text-sm font-medium text-white">Phone number</label>
-                            <input type="text" wire:model.defer="email"
+                            <input type="text" wire:model.defer="email" onkeypress="return CheckNumeric()"
                                 class="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm lg:text-3xl border-gray-300" />
 
                             @error('email')
@@ -42,7 +42,7 @@
 
                         <div class="col-span-6 sm:col-span-3">
                             <label class="block text-sm font-medium text-white">Pin</label>
-                            <input type="password" wire:model.defer="password"
+                            <input type="password" wire:model.defer="password" onkeypress="return CheckNumeric()"
                                 class="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm lg:text-3xl border-gray-300" />
                             @error('password')
                                 <label class="block text-sm font-medium text-red-700">{{ $message }}</label>

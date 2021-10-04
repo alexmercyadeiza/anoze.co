@@ -29,7 +29,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/director/login', AuthLogin::class);
+Route::get('/director/login', AuthLogin::class)->name('director.auth.login');
 Route::get('/login', Login::class)->name('manager.auth.login');
 
 // Director Routes
